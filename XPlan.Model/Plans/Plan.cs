@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Cache;
 using System.Text;
 
-namespace XPlan.Model
+namespace XPlan.Model.Plans
 {
     public class Plan
     {
@@ -10,5 +11,6 @@ namespace XPlan.Model
         public string Text { get; set; }
         public DateTime CreateTime { get; set; }
         public int UserId { get; set; }
+        public EnumPlanState State { get; set; }
     }
 }

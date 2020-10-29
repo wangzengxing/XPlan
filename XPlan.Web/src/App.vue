@@ -21,7 +21,7 @@ export default {
   name: "app",
   data() {
     return {
-      activeIndex: '1'
+      activeIndex: "1"
     };
   },
 };

@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\XPlan.Repository\XPlan.Repository.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\XPlan.Service\XPlan.Service.Core.csproj" />
   </ItemGroup>
 
 

@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XPlan.Model\XPlan.Model.csproj" />
+    <ProjectReference Include="..\XPlan.Repository.Abstracts\XPlan.Repository.Abstracts.csproj" />
     <ProjectReference Include="..\XPlan.Service.Abstracts\XPlan.Service.Abstracts.csproj" />
   </ItemGroup>
 

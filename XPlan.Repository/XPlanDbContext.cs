@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using XPlan.Model;
+using XPlan.Model.Plans;
 
 namespace XPlan.Repository.EntityFrameworkCore
 {

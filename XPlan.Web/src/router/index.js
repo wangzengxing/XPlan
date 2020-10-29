@@ -7,6 +7,7 @@ import Project from '../components/Project';
 Vue.use(VueRouter);
 
 const routes = [
+  { path: '/', component: Plan },
   { path: '/1', component: Plan },
   { path: '/2', component: Schedule },
   { path: '/3', component: Project }

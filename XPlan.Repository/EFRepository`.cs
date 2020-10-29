@@ -48,7 +48,7 @@ namespace XPlan.Repository.EntityFrameworkCore
                 throw new ArgumentNullException(nameof(whereExpression));
             }
 
-            Debug.Assert(page > 1);
+            Debug.Assert(page > 0);
             Debug.Assert(size > 0);
 
             var offset = (page - 1) * size;
@@ -75,7 +75,7 @@ namespace XPlan.Repository.EntityFrameworkCore
                 throw new ArgumentNullException(nameof(whereExpression));
             }
 
-            Debug.Assert(page > 1);
+            Debug.Assert(page > 0);
             Debug.Assert(size > 0);
 
             var offset = (page - 1) * size;
@@ -275,7 +275,7 @@ namespace XPlan.Repository.EntityFrameworkCore
                 .Join(joinEntities, entitySelector, entity1Selector, resultSelector)
                 .Count(whereExpression);
 
-            Debug.Assert(page > 1);
+            Debug.Assert(page > 0);
             Debug.Assert(size > 0);
 
             var offset = (page - 1) * size;
@@ -323,7 +323,7 @@ namespace XPlan.Repository.EntityFrameworkCore
                 throw new ArgumentNullException(nameof(whereExpression));
             }
 
-            Debug.Assert(page > 1);
+            Debug.Assert(page > 0);
             Debug.Assert(size > 0);
 
             var offset = (page - 1) * size;
@@ -355,7 +355,7 @@ namespace XPlan.Repository.EntityFrameworkCore
                 throw new ArgumentNullException(nameof(orderByExpression));
             }
 
-            Debug.Assert(page > 1);
+            Debug.Assert(page > 0);
             Debug.Assert(size > 0);
 
             var offset = (page - 1) * size;
@@ -567,7 +567,7 @@ namespace XPlan.Repository.EntityFrameworkCore
                 .Join(joinEntities, entitySelector, entity1Selector, resultSelector)
                 .CountAsync(whereExpression);
 
-            Debug.Assert(page > 1);
+            Debug.Assert(page > 0);
             Debug.Assert(size > 0);
 
             var offset = (page - 1) * size;
