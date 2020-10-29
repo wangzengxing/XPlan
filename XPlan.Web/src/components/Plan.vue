@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-row id="search">
-      <el-col :span="20">
+      <el-col :span="10">
         <span>创建时间:</span>
         <el-date-picker
           v-model="createTime"
@@ -12,6 +12,8 @@
           @change="bind"
         >
         </el-date-picker>
+      </el-col>
+      <el-col :span="10">
         <span>任务状态:</span>
         <el-select v-model="state" placeholder="请选择" @change="this.bind">
           <el-option
@@ -50,7 +52,14 @@
       </el-table-column>
     </el-table>
     <el-row id="page">
-      <el-pagination background layout="prev, pager, next" :total="total" page-size="5" :current-page="page" @current-change="pageChange">
+      <el-pagination
+        background
+        layout="prev, pager, next"
+        :total="total"
+        page-size="5"
+        :current-page="page"
+        @current-change="pageChange"
+      >
       </el-pagination>
     </el-row>
     <el-dialog title="创建任务" :visible.sync="dialogFormVisible">
@@ -78,8 +87,8 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      page:1,
-      total:0,
+      page: 1,
+      total: 0,
       options: [
         {
           label: "待完成",
@@ -117,8 +126,8 @@ export default {
     this.bind();
   },
   methods: {
-    pageChange(page){
-      this.page=page;
+    pageChange(page) {
+      this.page = page;
       this.bind();
     },
     update(row, state) {
@@ -150,7 +159,7 @@ export default {
         })
         .then((r) => {
           this.tableData = r.data.data;
-          this.total=r.data.totalCount;
+          this.total = r.data.totalCount;
         })
         .catch((e) => {
           this.$message.error("获取数据失败!");
