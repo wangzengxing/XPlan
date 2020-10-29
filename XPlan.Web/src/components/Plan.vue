@@ -56,7 +56,7 @@
         background
         layout="prev, pager, next"
         :total="total"
-        page-size="5"
+        :page-size="5"
         :current-page="page"
         @current-change="pageChange"
       >
