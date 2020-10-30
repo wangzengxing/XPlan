@@ -46,6 +46,10 @@ namespace XPlan.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseDefaultFiles();
+
+            app.UseStaticFiles();
+
             app.UseRouting();
 
             app.UseAuthorization();

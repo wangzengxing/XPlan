@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPlan.Repository.Abstracts"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPlan.Repository.EntityFrameworkCore", "XPlan.Repository\XPlan.Repository.EntityFrameworkCore.csproj", "{02A16DAB-4D78-4CF8-A0FE-980374183D43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPlan.Model", "XPlan.Model\XPlan.Model.csproj", "{D020F3B3-8C10-42FC-AC03-B77D06C660C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPlan.Model", "XPlan.Model\XPlan.Model.csproj", "{D020F3B3-8C10-42FC-AC03-B77D06C660C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
