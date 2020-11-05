@@ -9,7 +9,6 @@ WORKDIR /src
 COPY ["XPlan.WebApi/XPlan.WebApi.csproj", "XPlan.WebApi/"]
 COPY ["XPlan.Service/XPlan.Service.Core.csproj", "XPlan.Service/"]
 COPY ["XPlan.Repository.Abstracts/XPlan.Repository.Abstracts.csproj", "XPlan.Repository.Abstracts/"]
-COPY ["XPlan.Model/XPlan.Model.csproj", "XPlan.Model/"]
 COPY ["XPlan.Service.Abstracts/XPlan.Service.Abstracts.csproj", "XPlan.Service.Abstracts/"]
 COPY ["XPlan.Repository/XPlan.Repository.EntityFrameworkCore.csproj", "XPlan.Repository/"]
 RUN dotnet restore "XPlan.WebApi/XPlan.WebApi.csproj"
