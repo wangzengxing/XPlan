@@ -4,9 +4,9 @@ using System.Text;
 
 namespace XPlan.Repository.Abstracts
 {
-    public class Page<TEntity>
+    public class PageResult<TEntity>
     {
-        public Page(List<TEntity> data,int totalCount)
+        public PageResult(List<TEntity> data,int totalCount)
         {
             Data = data;
             TotalCount = totalCount;

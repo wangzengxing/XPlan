@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPlan.Repository.Abstracts"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPlan.Repository.EntityFrameworkCore", "XPlan.Repository\XPlan.Repository.EntityFrameworkCore.csproj", "{02A16DAB-4D78-4CF8-A0FE-980374183D43}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPlan.Model", "XPlan.Model\XPlan.Model.csproj", "{D020F3B3-8C10-42FC-AC03-B77D06C660C7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,18 +85,6 @@ Global
 		{02A16DAB-4D78-4CF8-A0FE-980374183D43}.Release|x64.Build.0 = Release|Any CPU
 		{02A16DAB-4D78-4CF8-A0FE-980374183D43}.Release|x86.ActiveCfg = Release|Any CPU
 		{02A16DAB-4D78-4CF8-A0FE-980374183D43}.Release|x86.Build.0 = Release|Any CPU
-		{D020F3B3-8C10-42FC-AC03-B77D06C660C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D020F3B3-8C10-42FC-AC03-B77D06C660C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D020F3B3-8C10-42FC-AC03-B77D06C660C7}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{D020F3B3-8C10-42FC-AC03-B77D06C660C7}.Debug|x64.Build.0 = Debug|Any CPU
-		{D020F3B3-8C10-42FC-AC03-B77D06C660C7}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D020F3B3-8C10-42FC-AC03-B77D06C660C7}.Debug|x86.Build.0 = Debug|Any CPU
-		{D020F3B3-8C10-42FC-AC03-B77D06C660C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D020F3B3-8C10-42FC-AC03-B77D06C660C7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D020F3B3-8C10-42FC-AC03-B77D06C660C7}.Release|x64.ActiveCfg = Release|Any CPU
-		{D020F3B3-8C10-42FC-AC03-B77D06C660C7}.Release|x64.Build.0 = Release|Any CPU
-		{D020F3B3-8C10-42FC-AC03-B77D06C660C7}.Release|x86.ActiveCfg = Release|Any CPU
-		{D020F3B3-8C10-42FC-AC03-B77D06C660C7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,7 +95,6 @@ Global
 		{5524FF2B-D080-44CF-9C6A-70D5F8687A75} = {FBFC82F7-96AC-4959-A176-C0351AA40A51}
 		{AF627F52-875D-4745-A3B1-83BFB495E565} = {FBFC82F7-96AC-4959-A176-C0351AA40A51}
 		{02A16DAB-4D78-4CF8-A0FE-980374183D43} = {FBFC82F7-96AC-4959-A176-C0351AA40A51}
-		{D020F3B3-8C10-42FC-AC03-B77D06C660C7} = {FBFC82F7-96AC-4959-A176-C0351AA40A51}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB3B4215-B47F-4A50-A9C8-74BF1392C100}

@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XPlan.Model\XPlan.Model.csproj" />
     <ProjectReference Include="..\XPlan.Repository.Abstracts\XPlan.Repository.Abstracts.csproj" />
     <ProjectReference Include="..\XPlan.Service.Abstracts\XPlan.Service.Abstracts.csproj" />
   </ItemGroup>

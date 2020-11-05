@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace XPlan.Model
+namespace XPlan.Repository.Abstracts.Users
 {
     public class User
     {

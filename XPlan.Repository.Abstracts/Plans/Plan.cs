@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Cache;
 using System.Text;
 
-namespace XPlan.Model.Plans
+namespace XPlan.Repository.Abstracts.Plans
 {
     public class Plan
     {

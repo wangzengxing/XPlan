@@ -8,8 +8,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
-using XPlan.Model;
-using XPlan.Model.Plans;
+using XPlan.Repository.Abstracts.Plans;
 using XPlan.Repository.Abstracts;
 using XPlan.Repository.EntityFrameworkCore.Extensions;
 
@@ -49,7 +48,7 @@ namespace XPlan.WebApi.Controllers
             }
 
             var data = await _planRepository.GetListAsync(where, query.Page, query.Size, r => r.CreateTime, OrderByType.Desc);
-            return Ok(_mapper.Map<Page<PlanDto>>(data));
+            return Ok(_mapper.Map<PageResult<PlanDto>>(data));
         }
 
         [HttpPost]

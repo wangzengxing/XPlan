@@ -16,7 +16,7 @@ namespace XPlan.WebApi.Data.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.9");
 
-            modelBuilder.Entity("XPlan.Model.Plans.Plan", b =>
+            modelBuilder.Entity("XPlan.Repository.Abstracts.Plans.Plan", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

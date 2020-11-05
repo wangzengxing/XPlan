@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace XPlan.Model.Plans
+namespace XPlan.Repository.Abstracts.Plans
 {
     public class PlanQuery
     {

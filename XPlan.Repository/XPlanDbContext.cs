@@ -2,8 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using XPlan.Model;
-using XPlan.Model.Plans;
+using XPlan.Repository.Abstracts.Users;
+using XPlan.Repository.Abstracts.Plans;
 
 namespace XPlan.Repository.EntityFrameworkCore
 {

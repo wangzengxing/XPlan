@@ -6,7 +6,6 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using XPlan.Model;
 using XPlan.Repository.Abstracts;
 using XPlan.Repository.EntityFrameworkCore.Extensions;
 
@@ -41,7 +40,7 @@ namespace XPlan.Repository.EntityFrameworkCore
             return entities;
         }
 
-        public Page<TEntity> GetList(Expression<Func<TEntity, bool>> whereExpression, int page, int size)
+        public PageResult<TEntity> GetList(Expression<Func<TEntity, bool>> whereExpression, int page, int size)
         {
             if (whereExpression == null)
             {
@@ -65,10 +64,10 @@ namespace XPlan.Repository.EntityFrameworkCore
                  .AsNoTracking()
                  .Count(whereExpression);
 
-            return new Page<TEntity>(entities, totalCount);
+            return new PageResult<TEntity>(entities, totalCount);
         }
 
-        public Page<TEntity> GetList(Expression<Func<TEntity, bool>> whereExpression, int page, int size, Expression<Func<TEntity, object>> orderByExpression, OrderByType orderByType)
+        public PageResult<TEntity> GetList(Expression<Func<TEntity, bool>> whereExpression, int page, int size, Expression<Func<TEntity, object>> orderByExpression, OrderByType orderByType)
         {
             if (whereExpression == null)
             {
@@ -103,7 +102,7 @@ namespace XPlan.Repository.EntityFrameworkCore
                  .AsNoTracking()
                  .Count(whereExpression);
 
-            return new Page<TEntity>(entities.ToList(), totalCount);
+            return new PageResult<TEntity>(entities.ToList(), totalCount);
         }
 
         public TEntity Get(object id)
@@ -246,7 +245,7 @@ namespace XPlan.Repository.EntityFrameworkCore
             return data;
         }
 
-        public Page<TResult> Join<TEntity1, TKey, TResult>(Expression<Func<TEntity, TKey>> entitySelector, Expression<Func<TEntity1, TKey>> entity1Selector, Expression<Func<TResult, bool>> whereExpression, int page, int size, Expression<Func<TEntity, TEntity1, TResult>> resultSelector)
+        public PageResult<TResult> Join<TEntity1, TKey, TResult>(Expression<Func<TEntity, TKey>> entitySelector, Expression<Func<TEntity1, TKey>> entity1Selector, Expression<Func<TResult, bool>> whereExpression, int page, int size, Expression<Func<TEntity, TEntity1, TResult>> resultSelector)
             where TEntity1 : class, new()
             where TResult : class, new()
         {
@@ -287,7 +286,7 @@ namespace XPlan.Repository.EntityFrameworkCore
                 .Skip(offset)
                 .Take(limit)
                 .ToList();
-            return new Page<TResult>(data, totalCount);
+            return new PageResult<TResult>(data, totalCount);
         }
 
         public List<TResult> FromSql<TResult>(string sql, params object[] parameters)
@@ -316,7 +315,7 @@ namespace XPlan.Repository.EntityFrameworkCore
             return entities;
         }
 
-        public async Task<Page<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> whereExpression, int page, int size)
+        public async Task<PageResult<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> whereExpression, int page, int size)
         {
             if (whereExpression == null)
             {
@@ -340,10 +339,10 @@ namespace XPlan.Repository.EntityFrameworkCore
                  .AsNoTracking()
                  .Count(whereExpression);
 
-            return new Page<TEntity>(entities, totalCount);
+            return new PageResult<TEntity>(entities, totalCount);
         }
 
-        public async Task<Page<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> whereExpression, int page, int size, Expression<Func<TEntity, object>> orderByExpression, OrderByType orderByType)
+        public async Task<PageResult<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> whereExpression, int page, int size, Expression<Func<TEntity, object>> orderByExpression, OrderByType orderByType)
         {
             if (whereExpression == null)
             {
@@ -383,7 +382,7 @@ namespace XPlan.Repository.EntityFrameworkCore
                  .AsNoTracking()
                  .CountAsync(whereExpression);
 
-            return new Page<TEntity>(await entities.ToListAsync(), totalCount);
+            return new PageResult<TEntity>(await entities.ToListAsync(), totalCount);
         }
 
         public async Task<TEntity> GetAsync(object id)
@@ -538,7 +537,7 @@ namespace XPlan.Repository.EntityFrameworkCore
             return data;
         }
 
-        public async Task<Page<TResult>> JoinAsync<TEntity1, TKey, TResult>(Expression<Func<TEntity, TKey>> entitySelector, Expression<Func<TEntity1, TKey>> entity1Selector, Expression<Func<TResult, bool>> whereExpression, int page, int size, Expression<Func<TEntity, TEntity1, TResult>> resultSelector)
+        public async Task<PageResult<TResult>> JoinAsync<TEntity1, TKey, TResult>(Expression<Func<TEntity, TKey>> entitySelector, Expression<Func<TEntity1, TKey>> entity1Selector, Expression<Func<TResult, bool>> whereExpression, int page, int size, Expression<Func<TEntity, TEntity1, TResult>> resultSelector)
             where TEntity1 : class, new()
             where TResult : class, new()
         {
@@ -579,7 +578,7 @@ namespace XPlan.Repository.EntityFrameworkCore
                 .Skip(offset)
                 .Take(limit)
                 .ToListAsync();
-            return new Page<TResult>(data, totalCount);
+            return new PageResult<TResult>(data, totalCount);
         }
 
         public Task<List<TResult>> FromSqlAsync<TResult>(string sql, params object[] parameters) where TResult : class, new()
